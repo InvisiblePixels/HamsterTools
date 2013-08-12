@@ -15,5 +15,6 @@
 #import "NSJSONSerialization+CustomObjectSerialisation.h"
 #import "NSObject+ObjectUtils.h"
 #import "NSURL+Utilities.h"
-
+#import "NSString+Utils.h"
+#import "NSNumber+Utils.h"
 
