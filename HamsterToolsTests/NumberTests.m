@@ -34,7 +34,24 @@
     NSString *reckonedString = NSStringFromNumberInBinaryFormat(19);
     
     XCTAssertTrue([result isEqualToString:reckonedString], @"%@ %@", result, reckonedString);
+}
+
+- (void)testShiftLeftAndKeep {
     
+    unsigned long  originalNumber=0l;
+    unsigned long  keptBit=0l;
+    unsigned long  correctNewNumber = 2l;
+    unsigned long  correctKeptBit = 1l;
+
+    unsigned long  shiftBy = (sizeof(unsigned long ) * 8l) - 1l;
+    originalNumber = (1l << shiftBy); // the 1l IS KEY. Not 1. 1l.
+    
+    // Add the plus 1 so that our original number is 100000001 so that after the shift we have something non zero to test against.
+    originalNumber +=1l;
+    
+    unsigned long  newNumber = shiftLeftAndKeep(originalNumber, &keptBit);
+    XCTAssertTrue(newNumber == correctNewNumber, @"Not two (is: %lu)", newNumber);
+    XCTAssertTrue(keptBit == correctKeptBit, @"kept bit wrong (should be 1, is %lu)", keptBit);
     
 }
 

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "NSString+Utils.h"
+#import "NSString+ReverseEnum.h"
 
 @interface StringTests : XCTestCase
 
@@ -40,5 +41,9 @@
 
 }
 
+- (void)testReverseEnum {
+    
+    XCTAssertTrue([@"UIInterfaceOrientationPortrait" isEqualToString:[NSString reverseUIInterfaceOrientation:UIDeviceOrientationPortrait] ], @"reverse enum false");
+}
 
 @end

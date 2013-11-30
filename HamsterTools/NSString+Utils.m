@@ -19,10 +19,20 @@
     
     NSMutableString *newString = [[NSMutableString alloc] init];
     
-    for (int counter = self.length - 1; counter >= 0; counter--) {
+    for (NSInteger counter = self.length - 1; counter >= 0; counter--) {
         [newString appendFormat:@"%c", [self characterAtIndex:counter]];
     }
     return newString;
 }
+
+-(NSInteger)integerValueFromHexString {
+    
+    unsigned int decimalInteger;
+    NSScanner *scanner = [NSScanner scannerWithString:self];
+    [scanner scanHexInt:&decimalInteger];
+    return decimalInteger;
+    
+}
+
 
 @end

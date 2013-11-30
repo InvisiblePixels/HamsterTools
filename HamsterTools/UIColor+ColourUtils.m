@@ -10,23 +10,22 @@
 
 @implementation UIColor (ColourUtils)
 
-+(UIColor *)colourWithRed:(int)red green:(int)green blue:(int)blue alpha:(CGFloat)alpha {
++(UIColor *)colourWithRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(CGFloat)alpha {
     
-    return  [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:(CGFloat)alpha];
-    
+    return  [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:(CGFloat)alpha];
 }
 
-+(UIColor *)colourWithInteger:(long long int)integerColour alpha:(CGFloat)alpha {
-    
-    int blue = integerColour % 0x100; // mod 256
++(UIColor *)colourWithInteger:(NSInteger)integerColour alpha:(CGFloat)alpha {
+       
+    NSInteger blue = integerColour % 0x100; // mod 256
     integerColour >>= 0x8;
     
-    int green = integerColour % 0x100;
+    NSInteger green = integerColour % 0x100;
     integerColour >>= 0x8;
     
-    int red = integerColour;
+    NSInteger red = integerColour;
 
-    return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha]; // Don't forget FLOATING POINT DIVISION
+    return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha]; // Don't forget FLOATING POINT DIVISION
 }
 
 @end

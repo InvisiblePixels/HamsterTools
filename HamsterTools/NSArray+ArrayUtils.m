@@ -12,15 +12,14 @@
 
 -(id)objectAtIndexedSubscript:(NSInteger)idx {
     
-    NSUInteger index = idx;
-    
+    NSUInteger index = (NSUInteger)idx;
+      
     if (idx < 0) {
         // Negative index.
-        index = self.count + idx;
+        index = self.count + (NSUInteger)idx;
     }
     return [self objectAtIndex:index];
 }
-
 
 
 @end

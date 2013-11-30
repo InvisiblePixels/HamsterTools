@@ -29,16 +29,16 @@
      */
 
     if ([cont isKindOfClass:[NSArray class]]) {
-        for (int i = 0; i < ([(NSArray *)cont count]); i++) {
+        for (NSUInteger i = 0; i < ([(NSArray *)cont count]); i++) {
             
             if ([cont[i] isKindOfClass:[NSArray class]]) {
-                NSLog(@"element %d is array", i);
+                NSLog(@"element %lu is array", (unsigned long)i);
                 // Recurse.
                 [NSJSONSerialization processContainer:cont[i]];
                 
             } else
                 if ([cont[i] isKindOfClass:[NSDictionary class]]) {
-                    NSLog(@"element %d is dictionary", i);
+                    NSLog(@"element %lu is dictionary", (unsigned long)i);
                     // Test to see if it's a isA or not.
                     if ([cont[i] valueForKey:@"isACustomJSONClassType"]) {
                         // Need to replace it with out object.

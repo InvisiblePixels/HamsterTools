@@ -1,0 +1,16 @@
+//
+//  Universal-386.xcconfig
+//  HamsterTools
+//
+//  Created by Helen McManus on 29/11/2013.
+//  Copyright (c) 2013 InvisiblePixels. All rights reserved.
+//
+
+//:configuration = Universal-386
+ARCHS = $(ARCHS_STANDARD_INCLUDING_64_BIT)
+ONLY_ACTIVE_ARCH = NO
+//SDKROOT = iphonesimulator7.0
+SDKROOT = iphonesimulator
+VALID_ARCHS = i386 x86_64
+
+

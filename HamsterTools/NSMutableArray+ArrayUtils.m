@@ -13,6 +13,7 @@
 -(void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     
     if (fromIndex == toIndex) {
+        // Don't do anything!
         return;
     }
     
