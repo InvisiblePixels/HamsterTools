@@ -462,7 +462,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8BC75928-F14C-4BAA-834C-7B811802724D";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -479,7 +479,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8BC75928-F14C-4BAA-834C-7B811802724D";
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -543,6 +543,7 @@
 				4331707218480F7E006D87EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		43C3B99817AC0BD2009B95D8 /* Build configuration list for PBXProject "HamsterTools" */ = {
 			isa = XCConfigurationList;

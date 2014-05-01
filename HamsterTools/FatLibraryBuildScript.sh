@@ -19,13 +19,14 @@ xcodebuild -target HamsterTools -xcconfig $PROJECT_DIR/$PROJECT_NAME/${CONFIGarm
 
 
 # Now lipo the above two together to get one nice fat juice binary.
-mkdir -p $PROJECT_DIR/HamsterToolsSDK
-lipo $CONFIG_BUILD_DIR386/libHamsterTools.a  $CONFIG_BUILD_DIRarm/libHamsterTools.a   -create    -output $PROJECT_DIR/HamsterToolsSDK/libHamsterTools.a
+SDK_DESTINATION=$PROJECT_DIR/../_SDKs/HamsterToolsSDK
+mkdir -p $SDK_DESTINATION
+lipo $CONFIG_BUILD_DIR386/libHamsterTools.a  $CONFIG_BUILD_DIRarm/libHamsterTools.a   -create    -output $SDK_DESTINATION/libHamsterTools.a
 
 
 # Also copy all of the .h files over.
 for file in $PROJECT_DIR/HamsterTools/*.h; do
-    cp $file $PROJECT_DIR/HamsterToolsSDK
+    cp $file $SDK_DESTINATION
 done
 
 
