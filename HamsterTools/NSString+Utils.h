@@ -12,6 +12,6 @@
 
 -(NSString *)tac;
 -(NSString *)reverseString;
--(NSInteger)integerValueFromHexString;
+-(NSUInteger)integerValueFromHexString;
 
 @end

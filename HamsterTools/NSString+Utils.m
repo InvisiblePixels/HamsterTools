@@ -25,12 +25,12 @@
     return newString;
 }
 
--(NSInteger)integerValueFromHexString {
+-(NSUInteger)integerValueFromHexString {
     
-    unsigned int decimalInteger;
+    unsigned long long decimalInteger;
     NSScanner *scanner = [NSScanner scannerWithString:self];
-    [scanner scanHexInt:&decimalInteger];
-    return decimalInteger;
+    [scanner scanHexLongLong:&decimalInteger];
+    return (NSUInteger)decimalInteger;
     
 }
 

@@ -30,6 +30,7 @@
 +(NSString *)reverseUIApplicationState:(NSInteger)state;
 +(NSString *)reverseUIInterfaceOrientation:(NSInteger)orientation;
 +(NSString *)reverseSCNetworkReachabilityFlags:(SCNetworkReachabilityFlags)flags;
++(NSString *)reverseCGBlendMode:(CGBlendMode)blendMode;
 
 
 @end

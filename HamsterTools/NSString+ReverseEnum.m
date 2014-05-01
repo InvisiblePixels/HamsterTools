@@ -202,7 +202,47 @@
 }
 
 
++(NSString *)reverseCGBlendMode:(CGBlendMode)blendMode {
+    
+   
+    NSArray *array = @[
+                       @"kCGBlendModeNormal",
+                       @"kCGBlendModeMultiply",
+                       @"kCGBlendModeScreen",
+                       @"kCGBlendModeOverlay",
+                       @"kCGBlendModeDarken",
+                       @"kCGBlendModeLighten",
+                       @"kCGBlendModeColorDodge",
+                       @"kCGBlendModeColorBurn",
+                       @"kCGBlendModeSoftLight",
+                       @"kCGBlendModeHardLight",
+                       @"kCGBlendModeDifference",
+                       @"kCGBlendModeExclusion",
+                       @"kCGBlendModeHue",
+                       @"kCGBlendModeSaturation",
+                       @"kCGBlendModeColor",
+                       @"kCGBlendModeLuminosity",
+                       @"kCGBlendModeClear",
+                       @"kCGBlendModeCopy",
+                       @"kCGBlendModeSourceIn",
+                       @"kCGBlendModeSourceOut",
+                       @"kCGBlendModeSourceAtop",
+                       @"kCGBlendModeDestinationOver",
+                       @"kCGBlendModeDestinationIn",
+                       @"kCGBlendModeDestinationOut",
+                       @"kCGBlendModeDestinationAtop",
+                       @"kCGBlendModeXOR",
+                       @"kCGBlendModePlusDarker",
+                       @"kCGBlendModePlusLighter"];
+    
+    if (blendMode < array.count) {
+        return array[blendMode];
+    } else {
+        return [NSString stringWithFormat:@"Blend mode %d invalid.", blendMode];
+    }
 
+    
+}
 
 
 @end

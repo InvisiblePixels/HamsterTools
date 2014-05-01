@@ -8,11 +8,13 @@
 
 // Master header file to include all the other files.
 
-#warning if dragging and dropping this into another project, you must must must\
-MUST MUST MUST\
-SKIP INSTALL\
-otherwise it won't create a proper app archive, rather just some glorified zip file.
-
+/*******************************************************
+ * If dragging and dropping this into another project, *
+ * you must must must MUST MUST MUST                   *
+ * ================    SKIP INSTALL   ================ *
+ * otherwise it won't create a proper app archive,     *
+ * rather just some glorified zip file.                *
+ *******************************************************/
 
 
 #import "UIColor+ColourUtils.h"
